@@ -1,0 +1,204 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --board "/ti/boards/LP_CC1314R10_RGZ" --rtos "tirtos7" --product "simplelink_cc13xx_cc26xx_sdk@7.41.00.17"
+ * @versions {"tool":"1.18.1+3343"}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const CCFG         = scripting.addModule("/ti/devices/CCFG");
+const rfdesign     = scripting.addModule("/ti/devices/radioconfig/rfdesign");
+const Display      = scripting.addModule("/ti/display/Display");
+const Display1     = Display.addInstance();
+const GPIO         = scripting.addModule("/ti/drivers/GPIO", {}, false);
+const GPIO1        = GPIO.addInstance();
+const GPIO2        = GPIO.addInstance();
+const GPIO3        = GPIO.addInstance();
+const GPIO4        = GPIO.addInstance();
+const NVS          = scripting.addModule("/ti/drivers/NVS");
+const NVS1         = NVS.addInstance();
+const NVS2         = NVS.addInstance();
+const RF           = scripting.addModule("/ti/drivers/RF");
+const SPI          = scripting.addModule("/ti/drivers/SPI", {}, false);
+const SPI1         = SPI.addInstance();
+const SPI2         = SPI.addInstance();
+const Timer        = scripting.addModule("/ti/drivers/Timer", {}, false);
+const Timer1       = Timer.addInstance();
+const Button       = scripting.addModule("/ti/drivers/apps/Button");
+const Button1      = Button.addInstance();
+const Button2      = Button.addInstance();
+const Button3      = Button.addInstance();
+const Button4      = Button.addInstance();
+const LED          = scripting.addModule("/ti/drivers/apps/LED");
+const LED1         = LED.addInstance();
+const LED2         = LED.addInstance();
+const Settings     = scripting.addModule("/ti/posix/tirtos/Settings");
+const BIOS         = scripting.addModule("/ti/sysbios/BIOS");
+const Boot         = scripting.addModule("/ti/sysbios/family/arm/cc26xx/Boot");
+const Hwi          = scripting.addModule("/ti/sysbios/family/arm/v8m/Hwi");
+const GateMutexPri = scripting.addModule("/ti/sysbios/gates/GateMutexPri");
+const HeapCallback = scripting.addModule("/ti/sysbios/heaps/HeapCallback");
+const Clock        = scripting.addModule("/ti/sysbios/knl/Clock");
+const Idle         = scripting.addModule("/ti/sysbios/knl/Idle");
+const Idle2        = Idle.addInstance();
+const Semaphore    = scripting.addModule("/ti/sysbios/knl/Semaphore");
+const Swi          = scripting.addModule("/ti/sysbios/knl/Swi");
+const Task         = scripting.addModule("/ti/sysbios/knl/Task");
+const Error        = scripting.addModule("/ti/sysbios/runtime/Error");
+const Memory       = scripting.addModule("/ti/sysbios/runtime/Memory");
+const SysCallback  = scripting.addModule("/ti/sysbios/runtime/SysCallback");
+const System       = scripting.addModule("/ti/sysbios/runtime/System");
+const ti154stack   = scripting.addModule("/ti/ti154stack/ti154stack");
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+CCFG.xoscCapArray             = true;
+CCFG.xoscCapArrayDelta        = 0xD5;
+CCFG.enableBootloaderBackdoor = true;
+CCFG.dioBootloaderBackdoor    = 15;
+CCFG.levelBootloaderBackdoor  = "Active low";
+CCFG.addressFlashVectorTable  = 0x00029F80;
+CCFG.ccfgTemplate.$name       = "ti_devices_CCFG_CCFGCC26XXTemplate0";
+
+Display1.$hardware               = system.deviceData.board.components.XDS110UART;
+Display1.$name                   = "CONFIG_DISPLAY";
+Display1.uart.$name              = "CONFIG_DISPLAY_UART";
+Display1.uart.uart.$assign       = "UART1";
+Display1.uart.uart.txPin.$assign = "boosterpack.4";
+Display1.uart.uart.rxPin.$assign = "boosterpack.3";
+
+GPIO1.$name           = "CONFIG_GPIO_RST";
+GPIO1.mode            = "Output";
+GPIO1.gpioPin.$assign = "boosterpack.6";
+
+GPIO2.$name           = "CONFIG_GPIO_DC";
+GPIO2.mode            = "Output";
+GPIO2.gpioPin.$assign = "boosterpack.23";
+
+GPIO3.$name           = "CONFIG_GPIO_CS";
+GPIO3.mode            = "Output";
+GPIO3.gpioPin.$assign = "boosterpack.24";
+
+GPIO4.$name = "CONFIG_GPIO_1";
+
+NVS1.$name                    = "CONFIG_NVSINTERNAL";
+NVS1.internalFlash.$name      = "ti_drivers_nvs_NVSCC26XX0";
+NVS1.internalFlash.regionBase = 0x52000;
+NVS1.internalFlash.regionSize = 0x4000;
+
+NVS2.$name               = "CONFIG_NVS_0";
+NVS2.$hardware           = system.deviceData.board.components.MX25R8035F;
+NVS2.externalFlash.$name = "ti_drivers_nvs_NVSSPI25X0";
+
+SPI1.$name                = "CONFIG_SPI_LCD";
+SPI1.minDmaTransferSize   = 1;
+SPI1.defaultTxBufferValue = "0";
+SPI1.spi.sclkPin.$assign  = "boosterpack.25";
+SPI1.spi.pociPin.$assign  = "boosterpack.26";
+SPI1.spi.picoPin.$assign  = "boosterpack.27";
+
+Timer1.$name                       = "CONFIG_TIMER_0";
+Timer1.timerType                   = "32 Bits";
+Timer1.timerInstance.$name         = "CONFIG_TIMER_0_GP";
+Timer1.timerInstance.timer.$assign = "GPTM0";
+
+Button1.$hardware      = system.deviceData.board.components["BTN-1"];
+Button1.$name          = "BTN_DWN";
+Button1.button.$assign = "boosterpack.13";
+
+Button2.$hardware      = system.deviceData.board.components["BTN-2"];
+Button2.$name          = "BTN_UP";
+Button2.button.$assign = "boosterpack.12";
+
+Button3.$name          = "BTN_ENTR";
+Button3.button.$assign = "boosterpack.32";
+
+Button4.$name          = "BTN_EXIT";
+Button4.button.$assign = "boosterpack.31";
+
+LED1.$hardware      = system.deviceData.board.components.LED_RED;
+LED1.$name          = "CONFIG_LED_RED";
+LED1.ledPin.$assign = "boosterpack.39";
+LED1.gpioPin.$name  = "CONFIG_GPIO_RLED";
+
+LED2.$hardware      = system.deviceData.board.components.LED_GREEN;
+LED2.$name          = "CONFIG_LED_GREEN";
+LED2.ledPin.$assign = "boosterpack.40";
+LED2.gpioPin.$name  = "CONFIG_GPIO_GLED";
+
+const NVSSPI25XDevice                        = scripting.addModule("/ti/drivers/nvs/NVSSPI25XDevice", {}, false);
+const NVSSPI25XDevice1                       = NVSSPI25XDevice.addInstance({}, false);
+NVSSPI25XDevice1.$name                       = "CONFIG_NVS_SPI_0";
+NVS2.externalFlash.spiFlashDevice            = NVSSPI25XDevice1;
+NVSSPI25XDevice1.chipSelect.$assign          = "boosterpack.38";
+NVSSPI25XDevice1.chipSelectPinInstance.$name = "CONFIG_GPIO_0";
+
+SPI2.$name                         = "CONFIG_SPI_0";
+SPI2.$hardware                     = system.deviceData.board.components.LP_SPI_BUS;
+NVSSPI25XDevice1.sharedSpiInstance = SPI2;
+
+BIOS.assertsEnabled = false;
+BIOS.rtsGateType    = "BIOS_GateMutexPri";
+BIOS.heapSize       = 0x00000000;
+BIOS.heapType       = "HeapCallback";
+
+Hwi.excHandlerFunc = "Main_excHandler";
+Hwi.nvicCCR        = [];
+
+HeapCallback.initFxn           = "osalHeapInitFxn";
+HeapCallback.allocInstFxn      = "osalHeapAllocFxn";
+HeapCallback.freeInstFxn       = "osalHeapFreeFxn";
+HeapCallback.getStatsInstFxn   = "osalHeapGetStatsFxn";
+HeapCallback.isBlockingInstFxn = "osalHeapIsBlockingFxn";
+
+Clock.tickPeriod  = 10;
+Clock.swiPriority = 4;
+
+const Timer_1       = scripting.addModule("/ti/sysbios/family/arm/v8m/cc26x4/Timer", {}, false);
+Timer_1.rtc.$assign = "RTC0";
+
+Idle2.$name   = "powerIdle";
+Idle2.idleFxn = "Power_idleFunc";
+
+Semaphore.supportsPriority = false;
+
+Swi.numPriorities = 6;
+
+Task.checkStackFlag   = false;
+Task.defaultStackSize = 512;
+Task.numPriorities    = 6;
+
+Error.policy = "Error_SPIN";
+
+System.abortFxn          = "System_abortSpin";
+System.exitFxn           = "System_exitSpin";
+System.maxAtexitHandlers = 1;
+System.supportModule     = "SysCallback";
+
+ti154stack.project                            = "sensor";
+ti154stack.lockProject                        = true;
+ti154stack.transmitPower                      = "5";
+ti154stack.reportingInterval                  = 15000;
+ti154stack.pollingInterval                    = 1000;
+ti154stack.radioConfig.codeExportConfig.$name = "ti_devices_radioconfig_code_export_param0";
+ti154stack.aesccmModule.$name                 = "CONFIG_AESCCM_0";
+ti154stack.ti154stackModule.$name             = "ti_ti154stack_ti154stack_config_mod0";
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+GPIO4.gpioPin.$suggestSolution         = "boosterpack.30";
+SPI1.spi.$suggestSolution              = "SPI0";
+SPI1.spi.dmaRxChannel.$suggestSolution = "DMA_CH3";
+SPI1.spi.dmaTxChannel.$suggestSolution = "DMA_CH4";
+SPI2.spi.$suggestSolution              = "SPI2";
+SPI2.spi.sclkPin.$suggestSolution      = "boosterpack.7";
+SPI2.spi.pociPin.$suggestSolution      = "boosterpack.14";
+SPI2.spi.picoPin.$suggestSolution      = "boosterpack.15";
+SPI2.spi.dmaRxChannel.$suggestSolution = "DMA_CH19";
+SPI2.spi.dmaTxChannel.$suggestSolution = "DMA_CH20";
