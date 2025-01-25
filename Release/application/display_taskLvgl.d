@@ -99,9 +99,9 @@ application/display_taskLvgl.o: ../application/display_taskLvgl.c \
  C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/source/ti/drivers/apps/Button.h \
  C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/source/ti/drivers/apps/LED.h \
  C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/source/ti/drivers/PWM.h \
- C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/st7789.h \
+ C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/lcd_driver/st7789.h \
  C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/source/ti/drivers/Board.h \
- C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/fonts.h \
+ C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/lcd_driver/fonts.h \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/UGUI/ugui.h \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/UGUI/ugui_config.h \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/UGUI/ugui_colors.h \
@@ -328,7 +328,8 @@ application/display_taskLvgl.o: ../application/display_taskLvgl.c \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/LVGL_Library/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.h \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/LVGL_Library/lvgl/src/lvgl.h \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/LVGL_Library/lvgl/src/extra/widgets/span/lv_span.h \
- C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/LVGL_Library/lvgl/src/lvgl.h
+ C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/LVGL_Library/lvgl/src/lvgl.h \
+ C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/UI/ui.h
 
 C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/kernel/tirtos7/packages/ti/sysbios/BIOS.h:
 
@@ -526,11 +527,11 @@ C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/source/ti/drivers/apps/LED.h:
 
 C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/source/ti/drivers/PWM.h:
 
-C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/st7789.h:
+C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/lcd_driver/st7789.h:
 
 C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/source/ti/drivers/Board.h:
 
-C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/fonts.h:
+C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/lcd_driver/fonts.h:
 
 C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/UGUI/ugui.h:
 
@@ -985,3 +986,5 @@ C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/w
 C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/LVGL_Library/lvgl/src/extra/widgets/span/lv_span.h:
 
 C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/LVGL_Library/lvgl/src/lvgl.h:
+
+C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/UI/ui.h:

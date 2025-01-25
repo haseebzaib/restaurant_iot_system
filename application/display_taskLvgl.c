@@ -64,6 +64,7 @@
 
 
 #include "LVGL_Library/lvgl/lvgl.h"
+#include "ui.h"
 
 
 sem_t display_handle;
@@ -79,34 +80,14 @@ void display_task_(uintptr_t arg1, uintptr_t arg2)
 
 
 
-    lv_init();
-    Display_init_lvgl(0,CONFIG_SPI_LCD);
-
-    lv_obj_t *screen = lv_scr_act();
-    // Create ID label
-    lv_obj_t * id_label = lv_label_create(screen);
-    lv_label_set_text(id_label, "ID: 12345");
-    lv_obj_align(id_label, LV_ALIGN_TOP_LEFT, 10, 10);
-
-    // Create battery bar
-    lv_obj_t * battery_bar = lv_bar_create(screen);
-    lv_bar_set_range(battery_bar, 0, 100);
-    lv_bar_set_value(battery_bar, 80, LV_ANIM_OFF);
-    lv_obj_set_size(battery_bar, 100, 10);
-    lv_obj_align(battery_bar, LV_ALIGN_TOP_RIGHT, -10, 10);
-
-    // Create time label
-    lv_obj_t * time_label = lv_label_create(screen);
-    lv_label_set_text(time_label, "12:00 PM - 01/01/2024");
-    lv_obj_align(time_label, LV_ALIGN_BOTTOM_MID, 0, 0);
-
+ ui_init();
 
     while(1)
     {
 
+      ui_loop();
 
-       lv_timer_handler();
-       Task_sleep(CLOCK_MS(10));
+
     }
 }
 

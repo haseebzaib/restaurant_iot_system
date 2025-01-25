@@ -46,7 +46,7 @@
 #include "control_task.h"
 #include "cui.h"
 #include "api_mac.h"
-
+#include "ui.h"
 
 
 
@@ -68,7 +68,7 @@
        }
 
       btn_process();
-
+      ui_lvglTickHandler();
   }
 
 

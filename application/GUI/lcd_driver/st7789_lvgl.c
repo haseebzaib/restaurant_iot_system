@@ -317,7 +317,7 @@ void ST7789_Init(uint_least8_t spi_index)
 #else
     spiParams.transferMode = SPI_MODE_BLOCKING;
 #endif
-    spiParams.bitRate     = 5000000;
+    spiParams.bitRate     = 8000000;
     spiParams.dataSize    = 8;
     controllerSpi         = SPI_open(spi_index_local, &spiParams);
 
@@ -379,7 +379,7 @@ void ST7789_Init(uint_least8_t spi_index)
     ST7789_WriteCommand (ST7789_DISPON);    //  Main screen turned on
 
     //HAL_Delay(50);
-    ST7789_Fill_Color(BLACK);               //  Fill with Black.
+    //ST7789_Fill_Color(BLACK);               //  Fill with Black.
 }
 
 /**

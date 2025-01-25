@@ -796,6 +796,9 @@ struct CUI_list_s {
     uint16_t currListIndex;
 };
 
+
+void cuiPrintTimeDate(char *timedate);
+
 /******************************************************************************
  Function Prototypes
  *****************************************************************************/

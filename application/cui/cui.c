@@ -357,6 +357,13 @@ CUI_retVal_t CUI_init(CUI_params_t* _pParams)
     return CUI_FAILURE;
 }
 
+void cuiPrintTimeDate(char *timedate)
+{
+    char buf[2] = "\n";
+    UART2_write(gUartHandle, timedate, strlen(timedate), NULL);
+    UART2_write(gUartHandle,buf, strlen(buf), NULL);
+}
+
 /*********************************************************************
  * @fn          CUI_paramsInit
  *

@@ -262,7 +262,7 @@ control_Task_dev_info.structValid = 0xBEEF;
          check_devInfoMail();
          check_notiInfoMail();
 
-         Task_sleep(CLOCK_MS(200));
+         Task_sleep(CLOCK_MS(1000));
 
 
      }

@@ -63,7 +63,7 @@ extern Mailbox_Handle control_task_NotiInfo_handle;
 /*Display Task*/
 extern Task_Struct displayTask;        /* not static so you can see in ROV */
 extern Task_Params displayTaskParam;
-#define displayTaskStackSize  (2*1024)
+#define displayTaskStackSize  (5*1024)
 extern uint8_t displayTaskStack[controlTaskStackSize];
 #define displayTaskPriority  4
 

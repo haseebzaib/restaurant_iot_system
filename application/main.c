@@ -343,6 +343,7 @@ void assertHandler(void)
  * @brief       "main()" function - starting point
  */
 int main(void)
+
 {
     pthread_attr_t      attrs;
     struct sched_param  priParam;

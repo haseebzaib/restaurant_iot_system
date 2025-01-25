@@ -180,7 +180,9 @@ application/GUI/LVGL_Library/lvgl/src/font \
 application/GUI/LVGL_Library/lvgl/src/hal \
 application/GUI/LVGL_Library/lvgl/src/misc \
 application/GUI/LVGL_Library/lvgl/src/widgets \
-application/GUI \
+application/GUI/UI/screens \
+application/GUI/UI \
+application/GUI/lcd_driver \
 application \
 application/clock \
 application/cui \

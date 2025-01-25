@@ -103,9 +103,9 @@ application/control_task.o: ../application/control_task.c \
  C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/source/ti/posix/ticlang/semaphore.h \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/sensor/sensor.h \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/control_task.h \
- C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/st7789.h \
+ C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/lcd_driver/st7789.h \
  C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/source/ti/drivers/Board.h \
- C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/fonts.h \
+ C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/lcd_driver/fonts.h \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/UGUI/ugui.h \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/UGUI/ugui_config.h \
  C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/UGUI/ugui_colors.h \
@@ -321,11 +321,11 @@ C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/w
 
 C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/control_task.h:
 
-C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/st7789.h:
+C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/lcd_driver/st7789.h:
 
 C:/ti/simplelink_cc13xx_cc26xx_sdk_7_41_00_17/source/ti/drivers/Board.h:
 
-C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/fonts.h:
+C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/lcd_driver/fonts.h:
 
 C:/Users/hzaib/Documents/Freelance\ Projects/Mughees\ proj/Ring\ ding\ project/watch\ workspace/sensor_watch/application/GUI/UGUI/ugui.h:
 
